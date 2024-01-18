@@ -1,0 +1,10 @@
+flask
+sqlalchemy
+pymysql
+mysql-connector-python
+flask-sqlalchemy
+requests
+nltk
+numpy
+pandas
+python-dotenv

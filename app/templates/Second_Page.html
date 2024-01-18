@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Dropdown Lists</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+flex-direction: column;
+}
+
+h1 {
+color: #333;
+margin-bottom: 20px;
+}
+
+form {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+width: 300px; /* Adjust the width as needed */
+}
+
+label {
+display: block;
+margin: 10px 0;
+color: #555;
+}
+
+select {
+width: 100%;
+padding: 8px;
+margin: 5px 0 20px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.dropdown-container {
+display: flex;
+justify-content: space-between;
+}
+
+input[type="submit"] {
+background-color: #4caf50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<h1>News Sentiment Analysis</h1>
+<form action="/submit" , method="post">
+<div class="dropdown-container">
+<div>
+<label for="dropdown1">Date: </label> <select id="dropdown1" name="dropdown1"> {% for item in Dates %} <option value="{{ item }}">{{ item }}</option> {% endfor %} </select>
+</div>
+<div>
+<label for="dropdown2">Sentiment: </label> <select id="dropdown2" name="dropdown2"> <option value="Positive">Positive</option> <option value="Negative">Negative</option> <option value="Neutral">Neutral</option> </select>
+</div>
+</div>
+<br><input type="submit" value="Submit">
+</form>
+</body>
+</html>
+

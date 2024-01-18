@@ -1,0 +1,55 @@
+<!doctype html>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>URL List</title>
+	<style>
+	body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 20px;
+	background-color: #f4f4f4;
+	color: #333;
+	}
+	
+	h2 {
+	text-align: center;
+	color: #007bff;
+	}
+	
+	ul {
+	list-style-type: none;
+	padding: 0;
+	}
+	
+	li {
+	margin-bottom: 15px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
+	}
+	
+	li:hover {
+	transform: scale(1.03);
+	}
+	
+	a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: #333;
+	}
+	
+	a:hover {
+	background-color: #f0f0f0;
+	}
+	</style>
+	</head>
+	<body> {%block title%}{{ title }}{% endblock %} {%block content%}
+	<div class="container">
+	<h1>Links</h1> {% for item in Links %}
+	<li><option value="{{ item }}">{{ item[1:-1] }}</option></li> {% endfor %}
+	</div> {%endblock%}
+	</body>
+	</html>

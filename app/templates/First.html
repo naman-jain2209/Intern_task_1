@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Dropdown Lists</title>
+<style>
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+flex-direction: column;
+}
+
+h1 {
+color: #333;
+margin-bottom: 20px;
+}
+
+form {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+text-align: center;
+width: 300px; /* Adjust the width as needed */
+}
+
+label {
+display: block;
+margin: 10px 0;
+color: #555;
+}
+
+select {
+width: 100%;
+padding: 8px;
+margin: 5px 0 20px;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.dropdown-container {
+display: flex;
+justify-content: space-between;
+}
+
+input[type="submit"] {
+background-color: #4caf50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+</style>
+</head>
+
+<body>
+<h1>News Sentiment Analysis</h1>
+<form action="/enter", method="post">
+    <label for="Topic">News Topic:</label>
+        <input type="text" id="topic" name="topic"><br><br>
+    <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date"><br><br>
+    <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date"><br><br>
+    <input type="submit" value="Enter">
+    </form>
+</form>
+</body>
+</html>
