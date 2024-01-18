@@ -33,9 +33,10 @@ def enter():
         y=str(request.form['start_date'])
         z=str(request.form['end_date'])
     data_fetch(x,y,z)
+    title= "News for Topic "+x+" From "+y+" to "+z
     dates = db.session.execute(text('select distinct(Dates) from News;')).scalars()
     dates=list(dates)
-    return render_template('Second_Page.html', Dates=map(json.dumps, dates))
+    return render_template('Second_Page.html',title=title, Dates=map(json.dumps, dates))
 
 @app.route("/submit",methods=['POST', 'GET'])
 def submit():
