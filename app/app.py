@@ -9,7 +9,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 passwd=os.getenv('DB_Password')
-db_name=os.getenv('db_name')
+db_name='db'
 # Getting Data from NewsAPI
 # create the extension
 db = SQLAlchemy()
