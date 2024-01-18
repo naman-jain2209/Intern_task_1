@@ -15,7 +15,7 @@ load_dotenv()
 key=os.getenv('News_API_Key')
 passwd=os.getenv('DB_Password')
 db_name='db'
-nltk.download('vader_lexicon')
+nltk.download('all')
 analyzer=SentimentIntensityAnalyzer()
 
 
