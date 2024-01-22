@@ -82,9 +82,3 @@ def more_processing(df):
     #Data_to_be_sent 
     Data_to_be_sent=df[['author','url','title','description','Sentiment','Dates']]
     return Data_to_be_sent
-
-
-# data_fetch('GazaStrip', '2024-01-01', '2024-01-15')
-
-
-

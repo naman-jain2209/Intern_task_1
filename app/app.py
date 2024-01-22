@@ -1,12 +1,14 @@
 from flask import Flask, redirect, url_for, render_template,request
 from flask import Flask, render_template, request, url_for, redirect
-from sqlalchemy import text
+from sqlalchemy import text, create_engine
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import json
 from Data_fetching import data_fetch, write_file, preprocess
 import os
 from dotenv import load_dotenv
+import pandas as pd
+
 load_dotenv()
 passwd=os.getenv('DB_Password')
 db_name='db'
@@ -19,6 +21,7 @@ app = Flask(__name__)
 connection_str = "mysql+mysqlconnector://root:"+passwd+"@"+db_name+":3306/intern_task"
 app.config['SQLALCHEMY_DATABASE_URI']=connection_str
 # initialize the app with the extension
+engine=create_engine("mysql+mysqlconnector://root:"+passwd+"@"+db_name+":3306/intern_task")
 db = SQLAlchemy(app)
 
 
@@ -46,6 +49,7 @@ def submit():
         y=request.form['dropdown2']
     title="Resultant Links for Date="+x+" and Sentiment="+y
     links= db.session.execute(text('select url from News where Dates=:X and Sentiment=:Y;'), {"X":x, "Y":y}).scalars()
+    # links=pd.read_sql('select url from News where Dates='+x+' and Sentiment='+y+';',engine)
     return render_template('Result.html',title=title, Links=map(json.dumps, links))
     
 

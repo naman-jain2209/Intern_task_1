@@ -21,5 +21,5 @@ RUN pip install --upgrade pip
 # RUN pip freeze > requirements.txt
 # RUN pip install --requirement /tmp/requirements.txt
 RUN pip install -r requirements.txt
-CMD sh -c "sleep 10s; python3 app.py"
+CMD sh -c "sleep 20s; python3 app.py"
 	
