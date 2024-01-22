@@ -1,2 +1,2 @@
-FROM arm64v8/mysql
+FROM mysql
 COPY . /docker-entrypoint-initdb.d/
