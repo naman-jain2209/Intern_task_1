@@ -49,7 +49,7 @@
 	<body> {%block title%}{{ title }}{% endblock %} {%block content%}
 	<div class="container">
 	<h1>Links</h1> {% for item in Links %}
-	<li><option value="{{ item }}"><a href="{{ item[1:-1] }}">{{ item[1:-1] }}</a></option></li> {% endfor %}
+	<li><option value="{{ item }}"><a href="{{item[1:-1]}}">{{ item[1:-1] }}</a></option></li> {% endfor %}
 	</div> {%endblock%}
 	</body>
 	</html>
