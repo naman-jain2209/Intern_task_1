@@ -1,7 +1,6 @@
 # import libraries
 import requests
 import pandas as pd
-import re
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
