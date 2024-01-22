@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 key=os.getenv('News_API_Key')
 passwd=os.getenv('DB_Password')
-db_name='localhost'
+db_name='db'
 nltk.download('all')
 analyzer=SentimentIntensityAnalyzer()
 

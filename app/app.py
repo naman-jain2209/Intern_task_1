@@ -11,7 +11,7 @@ import pandas as pd
 
 load_dotenv()
 passwd=os.getenv('DB_Password')
-db_name='localhost'
+db_name='db'
 # Getting Data from NewsAPI
 # create the extension
 db = SQLAlchemy()
